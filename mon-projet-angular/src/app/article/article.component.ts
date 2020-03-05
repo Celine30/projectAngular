@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Input, Component, OnInit } from '@angular/core';
+import { getLocaleDayNames } from '@angular/common';
 
 @Component({
   selector: 'app-article',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
+  @Input() postTitle: string;
+  @Input() postContent: string;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+

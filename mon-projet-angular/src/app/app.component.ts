@@ -7,47 +7,28 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  isAuth = false;
 
-  lastUpdate = new Promise((resolve, reject) => {
-    const date = new Date();
-    setTimeout(
-      () => {
-        resolve(date);
-      }, 2000
-    );
-  });
-
-
-  appareils = [
+  posts = [
     {
-      name: 'Machine à laver',
-      status: 'éteint'
+      title: '1er Post',
+      content: 'Lorem'
     },
     {
-      name: 'sèche linge',
-      status: 'allumé'
+      title: '2eme Post',
+      content: 'Lorem'
     },
     {
-      name: 'Ordinateur',
-      status: 'éteint'
+      
+      title: '3eme Post',
+      content: 'Lorem'
     }
   ];
-  
+
 
   constructor() {
     
-    setTimeout(
-      () => {
-        this.isAuth = true;
-      }, 4000
-    );
-  }
-
-  onAllumer() {
-    console.log('On allume tout !');
-
-    
-
   }
 }
+
+
+
