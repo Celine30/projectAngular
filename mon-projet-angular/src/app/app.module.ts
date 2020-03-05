@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppareilComponent } from './appareil/appareil.component';
 import { FormsModule } from '@angular/forms';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppareilComponent
+    ArticleComponent,
   ],
   imports: [
     BrowserModule,
