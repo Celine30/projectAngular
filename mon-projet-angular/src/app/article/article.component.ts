@@ -1,5 +1,7 @@
 import { Input, Component, OnInit } from '@angular/core';
 import { getLocaleDayNames } from '@angular/common';
+/* import { Post} from '../post' */
+
 
 @Component({
   selector: 'app-article',
@@ -8,13 +10,27 @@ import { getLocaleDayNames } from '@angular/common';
 })
 export class ArticleComponent implements OnInit {
 
+
   @Input() postTitle: string;
   @Input() postContent: string;
+  @Input() postLoveIts: string; 
+  @Input() postCreated_at: Date; 
+
+
+
+  
+/*   public post =  new Post(
+    'Le 1er Post',
+    'Lorem',
+    1,
+    new Date(),
+    ); */
+
+
+
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }
-

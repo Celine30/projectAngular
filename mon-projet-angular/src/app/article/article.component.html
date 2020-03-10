@@ -1,7 +1,13 @@
-<div class="alert alert-success" role="alert">
-<h2>{{ postTitle }}</h2>
-<p>{{ postContent }}</p>
-<p>ah</p>
-<button class="btn btn-success">Love It</button>
-<button class="btn btn-danger">Don't love it</button>
+<div class="col-sm-12 alert alert-success" role="alert">
+
+<div class="col-sm-12 d-flex justify-content-between p-0">
+    <h2>{{ postTitle }}</h2>
+    <em>{{postCreated_at | date: 'short'}}</em>
+</div>
+
+    <p>{{ postContent }}</p>
+    <button class="btn btn-success mr-2">Love It</button>
+    <button class="btn btn-danger">Don't love it</button>
+
+
 </div>

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Input, Component } from '@angular/core';
+/* import { Post} from './post' */
+
 
 @Component({
   selector: 'app-root',
@@ -8,21 +10,27 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
+
   posts = [
     {
-      title: '1er Post',
-      content: 'Lorem'
+      title: 'Le 1er Post',
+      content: 'Lorem',
+      /* loveIts: 1, */
+      created_at: new Date(),
     },
     {
-      title: '2eme Post',
-      content: 'Lorem'
+      title: 'Le 2em Post',
+      content: 'Lorem',
+     /*  loveIts: 1, */
+      created_at: new Date(),
     },
     {
-      
-      title: '3eme Post',
-      content: 'Lorem'
+      title: 'Le 3em Post',
+      content: 'Lorem',
+      /* loveIts: 1, */
+      created_at: new Date(),
     }
-  ];
+  ]
 
 
   constructor() {
