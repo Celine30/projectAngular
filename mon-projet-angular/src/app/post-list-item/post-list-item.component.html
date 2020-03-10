@@ -1,0 +1,16 @@
+<div class="col-sm-12 alert " [ngClass] ="{'alert-danger': green === true ,
+                                            'alert-success': red === true  ,
+                                            'alert-info': neutre === true }" 
+                                            role="alert">
+
+    <div class="col-sm-12 d-flex justify-content-between p-0">
+        <h2>{{ postTitle }}</h2>
+        <em>{{ postDateCreated | date :'short' }}</em>
+    </div>
+    
+        <p>{{ postContent }}</p>
+        <button class="btn btn-success mr-2" (click)="clVert()">Like It</button>
+        <button class="btn btn-danger" (click)="clRouge()">Don't like it</button>
+    
+    
+    </div>

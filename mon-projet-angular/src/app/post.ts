@@ -1,16 +1,16 @@
 export class Post {
 
-    constructor(title: string,content: string, LoveIts: number, created_at: Date ) {
+    constructor(title: string,content: string, likeIts :number, dateCreated: Date ) {
         this.title = title;
         this.content = content;
-        this.LoveIts = LoveIts;
-        this.created_at = created_at
+        this.likeIts = likeIts;
+        this.dateCreated = dateCreated
 
     }
 
     public title: string;
     public content: string; 
-    public LoveIts: number; 
-    public created_at: Date
+    public likeIts: number; 
+    public dateCreated: Date
      
 }

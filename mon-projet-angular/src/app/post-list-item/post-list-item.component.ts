@@ -1,0 +1,38 @@
+import { Input, Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-post-list-item',
+  templateUrl: './post-list-item.component.html',
+  styleUrls: ['./post-list-item.component.scss']
+})
+export class PostListItemComponent implements OnInit {
+
+  red = false; 
+  green=false;
+  neutre =true;
+
+  @Input() postTitle: string;
+  @Input() postContent: string;
+  @Input() postLikeIts: string;
+  @Input() postDateCreated: string;
+
+  clVert(){
+    console.log("red")
+    this.red = true
+    this.green = false
+    this.neutre = false
+  }
+
+  clRouge(){
+    console.log("green")
+    this.green = true
+    this.neutre = false
+    this.red = false
+  }
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

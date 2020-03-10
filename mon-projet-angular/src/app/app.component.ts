@@ -1,5 +1,5 @@
 import { Input, Component } from '@angular/core';
-/* import { Post} from './post' */
+import { Post} from './post'
 
 
 @Component({
@@ -12,27 +12,13 @@ export class AppComponent {
 
 
   posts = [
-    {
-      title: 'Le 1er Post',
-      content: 'Lorem',
-      /* loveIts: 1, */
-      created_at: new Date(),
-    },
-    {
-      title: 'Le 2em Post',
-      content: 'Lorem',
-     /*  loveIts: 1, */
-      created_at: new Date(),
-    },
-    {
-      title: 'Le 3em Post',
-      content: 'Lorem',
-      /* loveIts: 1, */
-      created_at: new Date(),
-    }
-  ]
+    new Post('Le 1er Post','Lorem',2,new Date()),
+    new Post('Le 2eme Post','Lorem',2,new Date()),
+    new Post('Le 3eme Post','Lorem',2,new Date()),
+    new Post('Le 4eme Post','Lorem',2,new Date()),
+    ]
 
-
+  
   constructor() {
     
   }
