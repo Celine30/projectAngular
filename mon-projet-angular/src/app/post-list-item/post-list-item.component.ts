@@ -1,5 +1,6 @@
 import { Input, Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-post-list-item',
   templateUrl: './post-list-item.component.html',
@@ -7,15 +8,16 @@ import { Input, Component, OnInit } from '@angular/core';
 })
 export class PostListItemComponent implements OnInit {
 
-  red = false; 
-  green=false;
-  neutre =true;
-
   @Input() postTitle: string;
   @Input() postContent: string;
   @Input() postLikeIts: string;
   @Input() postDateCreated: string;
 
+
+  red = false; 
+  green=false;
+  neutre =true;
+  
   clVert(){
     console.log("red")
     this.red = true
@@ -30,9 +32,12 @@ export class PostListItemComponent implements OnInit {
     this.red = false
   }
 
-  constructor() { }
+  
+  constructor( ) { }
 
   ngOnInit(): void {
+
+
   }
 
 }
