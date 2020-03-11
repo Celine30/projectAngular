@@ -1,1 +1,22 @@
-<p>auth works!</p>
+<div class="row">
+    <div class="card">
+        <div class="card-header" >
+            <h2>Authentification</h2>
+        </div>
+        <div class="card-body" *ngIf = "!authstatus" >
+            <label for = "mail">Votre adresse mail : </label>
+            <input type="text" id = "mail">
+            <br>
+            <div class="row d-flex justify-content-center">
+                <button class="btn btn-success mt-3" (click)="onsignIn()"> Se connecter </button>
+            </div>
+        </div>
+
+        
+        <div class="card-body d-flex flex-column justify-content-center" *ngIf = "authstatus" >
+            <hr>
+            <button class="btn btn-danger" (click)="onsignOut()" > Se déconnecter </button>
+        </div>
+        
+    </div>
+</div>

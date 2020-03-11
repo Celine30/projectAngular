@@ -12,6 +12,7 @@ import { PostListItemComponent } from './post-list-item/post-list-item.component
 import { PostHeaderComponent } from './post-header/post-header.component';
 
 import { PostService } from './services/post.service';
+import { AuthService } from './services/auth.service';
 import { AuthComponent } from './auth/auth.component';
 import { PostViewComponent } from './post-view/post-view.component';
 import { Routes, RouterModule} from "@angular/router";
@@ -19,7 +20,7 @@ import { Routes, RouterModule} from "@angular/router";
 const appRoutes : Routes = [
   { path:'auth', component : AuthComponent },
   { path:'postview', component : PostViewComponent },
-  { path:'listpostview', component : PostListComponent },
+  { path:'postlist', component : PostListComponent },
   { path:'', component : AuthComponent }
 
 ]
@@ -43,7 +44,8 @@ const appRoutes : Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    PostService
+    PostService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
