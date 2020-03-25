@@ -19,7 +19,7 @@ import { Routes, RouterModule} from "@angular/router";
 
 const appRoutes : Routes = [
   { path:'auth', component : AuthComponent },
-  { path:'postview', component : PostViewComponent },
+  { path:'postview/:id', component : PostViewComponent },
   { path:'postlist', component : PostListComponent },
   { path:'', component : AuthComponent }
 
