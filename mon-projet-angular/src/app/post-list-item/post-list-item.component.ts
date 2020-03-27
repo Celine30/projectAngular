@@ -8,11 +8,16 @@ import { Input, Component, OnInit } from '@angular/core';
 })
 export class PostListItemComponent implements OnInit {
 
-  @Input() postTitle: string;
+  @Input() postId: number;
+  @Input() postPicture: string;
+  @Input() postName: string;
   @Input() postContent: string;
+  @Input() postBirth: string;
+  @Input() postAge: string;
+  @Input() postNationality: string;
+  @Input() postJob: string;
   @Input() postLikeIts: string;
-  @Input() postDateCreated: string;
-
+  
 
   red = false; 
   green=false;

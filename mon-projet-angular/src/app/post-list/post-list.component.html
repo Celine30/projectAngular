@@ -2,8 +2,13 @@
 
 <app-post-list-item
 *ngFor = "let post of posts"
-[postTitle]="post.title"
+[postId]="post.id"
+[postPicture]="post.picture"
+[postName]="post.name"
 [postContent]="post.content"
+[postBirth]="post.birth"
+[postAge]="post.age"
+[postNationality]="post.nationality"
+[postJob]="post.job"
 [postLikeIts]="post.likeIts"
-[postDateCreated]="post.dateCreated"
 ></app-post-list-item>
