@@ -15,13 +15,17 @@ import { PostService } from './services/post.service';
 import { AuthService } from './services/auth.service';
 import { AuthComponent } from './auth/auth.component';
 import { PostViewComponent } from './post-view/post-view.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 import { Routes, RouterModule} from "@angular/router";
 
 const appRoutes : Routes = [
   { path:'auth', component : AuthComponent },
   { path:'postview/:id', component : PostViewComponent },
   { path:'postlist', component : PostListComponent },
-  { path:'', component : AuthComponent }
+  { path:'', component : AuthComponent },
+  { path:'not-found', component : ErrorPageComponent },
+  { path:'**', redirectTo : '/not-found' },
+
 
 ]
 
