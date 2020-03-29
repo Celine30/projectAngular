@@ -5,22 +5,22 @@
         <article class="d-md-flex justify-content-between mb-3">
 
             <article class=" ">
-                <h2 >{{ posts[idPost].name}} </h2>
-                <em>{{ posts[idPost].job}}</em>
+                <h2 >{{post[0].name}} </h2>
+                <em>{{ post[0].job}}</em>
                 <div class="d-flex flex-column">
-                    <em>{{ posts[idPost].birth}}</em>
-                    <em >{{ posts[idPost].age}}</em>
-                    <em>{{ posts[idPost].nationality}}</em>
+                    <em>{{ post[0].birth}}</em>
+                    <em >{{ post[0].age}}</em>
+                    <em>{{ post[0].nationality}}</em>
                 </div>
                 
             </article>
 
-            <img src="{{posts[idPost].picture}}" class = "ml-auto" alt="">
+            <img src="{{post[0].picture}}" class = "ml-auto" alt="">
 
         </article>
 
         <article class="col-sm-12 p-0">
-            <p class="text-justify">{{ posts[idPost].content}}</p>
+            <p class="text-justify">{{post[0].content}}</p>
         </article>
 
     </section>

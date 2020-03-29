@@ -9,14 +9,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PostViewComponent implements OnInit {
 
-  idPost: string
-  posts: any[]
+  
+  idPost: number;
+  post: any[]
+
 
   constructor(private postService : PostService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.idPost = this.route.snapshot.params['id']
-    this.posts = this.postService.posts
+
+    const id = this.route.snapshot.params['id']
+    this.post = [this.postService.getPostById(+id)]
   }
 
 }

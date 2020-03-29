@@ -142,5 +142,15 @@ export class PostService {
         ),
 
         ] 
-   
+
+
+    getPostById(id:number){
+        const post = this.posts.find(
+            (postObject)=>{
+                return postObject.id === id;
+            }
+        );
+        return post
+    }
+    
 }
