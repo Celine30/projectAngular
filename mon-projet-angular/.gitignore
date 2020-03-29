@@ -10,6 +10,7 @@
 # dependencies
 /node_modules
 /src/assets
+/src/fonts
 
 # profiling files
 chrome-profiler-events*.json
