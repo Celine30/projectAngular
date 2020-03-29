@@ -24,17 +24,15 @@ export class PostListItemComponent implements OnInit {
   neutre =true;
   
   clVert(){
-    console.log("red")
-    this.red = true
-    this.green = false
+    this.red = false
+    this.green = true
     this.neutre = false
   }
 
   clRouge(){
-    console.log("green")
-    this.green = true
+    this.green = false
     this.neutre = false
-    this.red = false
+    this.red = true
   }
 
   
