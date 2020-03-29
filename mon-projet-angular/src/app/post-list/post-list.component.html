@@ -1,14 +1,17 @@
 
+<img src="../assets/fond.jpg" class= "w-100 m-0" alt="">
 
-<app-post-list-item
-*ngFor = "let post of posts"
-[postId]="post.id"
-[postPicture]="post.picture"
-[postName]="post.name"
-[postContent]="post.content"
-[postBirth]="post.birth"
-[postAge]="post.age"
-[postNationality]="post.nationality"
-[postJob]="post.job"
-[postLikeIts]="post.likeIts"
-></app-post-list-item>
+<div class="container mt-4">
+    <app-post-list-item
+    *ngFor = "let post of posts"
+    [postId]="post.id"
+    [postPicture]="post.picture"
+    [postName]="post.name"
+    [postContent]="post.content"
+    [postBirth]="post.birth"
+    [postAge]="post.age"
+    [postNationality]="post.nationality"
+    [postJob]="post.job"
+    [postLikeIts]="post.likeIts"
+    ></app-post-list-item>
+</div>

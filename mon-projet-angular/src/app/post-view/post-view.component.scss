@@ -1,0 +1,11 @@
+$colorPrimary:rgba(154,154,143,1);
+
+
+
+.bloc-actor-aloneBis{
+    background-image: url("../../assets/fond2O.png");
+    background-color:$colorPrimary!important;
+    border-radius: 10px;
+    background-color:$colorPrimary;
+    box-shadow: 1px 1px 5px $colorPrimary;
+}

@@ -1,10 +1,26 @@
-/* a.comm{
-    color: #585757; 
+
+$colorText:rgb(36,36,36);
+$colorPrimary:rgba(154,154,143,1);
+
+.colorPrimary{
+    background-color:$colorPrimary;
+    box-shadow: 1px 1px 5px $colorPrimary;
+.colorGreen{
+    color:green
+}
+.colorRed{
+    color:red
 }
 
- */
-
- img.pictureActor{
-    width: 120px!important;
-    height:161px!important;
- }
+article.bloc_actor{
+        font-size: 0.8em!important;
+        color: $colorText;
+        img.pictureActor{
+            width: 120px!important;
+            border-radius: 25px!important;
+        }
+        a.details{
+            color:$colorText!important; 
+        }
+    }
+}

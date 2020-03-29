@@ -1,3 +1,16 @@
-.menu{
-    padding: 0;
+$colorPrimary:rgba(154,154,143,1);
+
+
+.blocMenu{
+    background-color:$colorPrimary!important;
+
+}
+
+.blocBody{
+
+    background-image: url("/assets/pierres.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+
 }

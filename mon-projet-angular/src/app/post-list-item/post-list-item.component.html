@@ -1,30 +1,28 @@
-<section class="alert " [ngClass] ="{'alert-danger': green === true ,
-                                            'alert-success': red === true  ,
-                                            'alert-info': neutre === true }" 
-                                            role="alert">
+<section class=" container alert colorPrimary " role="alert">
 
-    <article class="row  pl-2">
+    <article class=" bloc_actor row   pl-2">
 
-    
-            <img class = "pictureActor" src="{{postPicture}}" alt="">
+            <img class = "col-lg-2 col-md-3 col-sm-6 m-auto pictureActor mg-thumbnail rounded" src="{{postPicture}}" alt="">
 
-            <div class="col-10" > 
-                <div class="col-sm-12">
-                    <h2 >{{ postName}} </h2>
-                    <em>{{ postJob}}</em>  
-                 </div>    
+            <div class=" col-lg-10 col-md-9 col-sm-12 d-flex flex-column justify-content-between " > 
                 
-                <div class="col-sm-12">
-                    <p>{{ postContent | slice:0:150}}</p>
+                <div class="mb-2">
+                    <h2 class="m-0 text-center  text-md-left" >{{ postName}} </h2>
+                    <p class="text-center  text-md-left">{{ postJob}}</p> 
+                </div>    
+                
+                <div class="">
+                    <p class="mb-2">{{ postContent | slice:0:500}}</p>
                 </div>
 
-                <div class="row col-sm-12">
-                    <a class="" routerLink="../postview/{{postId-1}}">Plus de détails</a>
+                <div class=" d-flex align-items-end">
+                    <a class="details" routerLink="../postview/{{postId-1}}">Plus de détails</a>
                     <div class="ml-auto">    
-                        <button class="btn btn-success mr-2" (click)="clVert()">Like him</button>
-                        <button class="btn btn-danger" (click)="clRouge()">Don't like him</button>
+                        <i class="fas fa-thumbs-up m-2 p-2 " (click)="clVert()" [ngClass] ="{'colorGreen': green === true }"></i>
+                        <i class="fas fa-thumbs-down m-2 p-2" (click)="clRouge()"[ngClass] ="{'colorRed': red === true }"></i>
                     </div>
                 </div>
+
             </div>
 
 
