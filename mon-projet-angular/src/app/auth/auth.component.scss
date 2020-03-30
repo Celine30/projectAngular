@@ -1,0 +1,42 @@
+$colorPrimary:rgba(154,154,143,1);
+
+@font-face{
+    font-family: "folkard";
+    font-style: normal;
+    font-weight: normal;
+    src: url('/src/fonts/folkard_.tff') ;
+    src: url('../../fonts/folkard_.woff') ;
+
+}
+
+.blocTitle{
+    position: absolute;
+    top:150px ;
+    font-family: 'folkard';
+    color:black;
+    font-size: 5em;
+    
+}
+
+
+.blocAuth{
+
+    min-height: 86vh;
+    background-image: url("/../assets/fond2O.png");
+    background-repeat: no-repeat;
+    background-position: 50% 20%; 
+
+    .card{
+        box-shadow: 2px 2px 5px $colorPrimary;
+        color:#333!important;
+        background-color:$colorPrimary!important;   
+
+        button{      
+            color:$colorPrimary;
+            background-color: rgb(76, 70, 65);
+            border:  rgb(76, 70, 65);
+        }
+    }
+}
+
+
