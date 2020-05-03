@@ -1,4 +1,4 @@
-$colorPrimary:rgba(154,154,143,1);
+@import '../../styles.scss';
 
 @font-face{
     font-family: "folkard";
@@ -6,7 +6,6 @@ $colorPrimary:rgba(154,154,143,1);
     font-weight: normal;
     src: url('/src/fonts/folkard_.tff') ;
     src: url('../../fonts/folkard_.woff') ;
-
 }
 
 .blocTitle{

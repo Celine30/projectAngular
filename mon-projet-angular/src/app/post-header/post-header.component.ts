@@ -20,13 +20,13 @@ export class PostHeaderComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const source = interval(1000);
+/*     const source = interval(1000);
 
     this.counterSubscription = source.subscribe(
       (value:number)=>{
         this.secondes = value
       }
-    );
+    ); */
     
 
   }

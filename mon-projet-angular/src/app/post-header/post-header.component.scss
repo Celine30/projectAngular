@@ -1,3 +1,27 @@
+
+@import '../../styles.scss';
+
+.menu{
+    background-color:$colorPrimary!important;
+    height: 60px;
+}
+
 .menu-icon{
     height: 50px!important;
+
+}
+
+button.navbar-toggler{
+
+}
+
+div.navbar-collapse{
+    z-index: 4;
+    margin: 0px -16px;
+    padding: 16px;
+    background-color: $colorPrimary;
+  
+
+   
+
 }
