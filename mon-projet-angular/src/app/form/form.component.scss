@@ -1,0 +1,20 @@
+$colorPrimary:rgba(154,154,143,1);
+
+@font-face{
+    font-family: "folkard";
+    font-style: normal;
+    font-weight: normal;
+    src: url('/src/fonts/folkard_.tff') ;
+    src: url('../../fonts/folkard_.woff') ;
+
+}
+
+.blocTitle{
+    padding-top: 50px;
+    font-family: 'folkard';
+    color:black;
+    font-size: 5em;
+    
+}
+
+

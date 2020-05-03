@@ -1,8 +1,11 @@
 import { Post} from '../post'
+import { Subject } from 'rxjs';
 
 export class PostService {
+
+    postSubject = new Subject<any[]>();
     
-    posts = [
+    private posts = [
         new Post(
             1,
             'assets/astierA.jpg',
@@ -143,7 +146,6 @@ export class PostService {
 
         ] 
 
-
     getPostById(id:number){
         const post = this.posts.find(
             (postObject)=>{
@@ -152,5 +154,35 @@ export class PostService {
         );
         return post
     }
-    
+
+    emitPostSubject (){
+        this.postSubject.next(this.posts.slice());
+    }
+
+    addActor(name:string, picture :string, birth :string, age :string, nationality :string, job :string, content:string){
+        const actorObject = {
+            id : 0,
+            name : '',
+            picture : '',
+            birth : '',
+            age : '',
+            nationality : '',
+            job : '',
+            content : '',
+            likeIts : 1
+        }
+        actorObject.id = this.posts[(this.posts.length-1)].id + 1 ;
+        actorObject.name = name;
+        actorObject.picture = picture;
+        actorObject.birth = birth;
+        actorObject.age = age;
+        actorObject.nationality = nationality;
+        actorObject.job = job;
+        actorObject.content = content;
+        actorObject.likeIts = 1
+        this.posts.push(actorObject);
+        this.emitPostSubject()
+
+    }
+
 }

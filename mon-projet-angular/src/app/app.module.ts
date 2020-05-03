@@ -18,11 +18,13 @@ import { PostViewComponent } from './post-view/post-view.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { Routes, RouterModule} from "@angular/router";
 import { AuthGuard } from './services/auth-guard.service';
+import { FormComponent } from './form/form.component';
 
 const appRoutes : Routes = [
   { path:'auth', component : AuthComponent },
   { path:'postview/:id', canActivate:[AuthGuard] , component : PostViewComponent },
   { path:'postlist', component : PostListComponent },
+  { path:'form', component : FormComponent },
   { path:'', component : AuthComponent },
   { path:'not-found', component : ErrorPageComponent },
   { path:'**', redirectTo : '/not-found' },
@@ -41,6 +43,7 @@ const appRoutes : Routes = [
     PostHeaderComponent,
     AuthComponent,
     PostViewComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
