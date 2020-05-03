@@ -11,17 +11,26 @@
 
 }
 
-button.navbar-toggler{
-
-}
 
 div.navbar-collapse{
     z-index: 4;
     margin: 0px -16px;
     padding: 16px;
     background-color: $colorPrimary;
-  
+}
 
-   
+.dropdown-menu.show{
+    background-color: $colorPrimary;
+    width: 220px!important;
+}
 
+.dropdown-item{
+    padding-left: 5px!important;
+    padding-right: 0px!important;
+    
+}
+
+.dropdown-menu a:hover{
+    background-color: $colorPrimary;
+    color:white
 }

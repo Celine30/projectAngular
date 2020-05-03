@@ -12,8 +12,12 @@
             <li routerLinkActive="active">
                 <a class="nav-link" routerLink="form">Ajouter des Acteurs <span class="sr-only">(current)</span></a>
             </li>
-            <li routerLinkActive="active">
-                <a class="nav-link" routerLink="userlist">List <span class="sr-only">(current)</span></a>
+            <li routerLinkActive="active" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Les utilisateurs</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" class="nav-link" routerLink="userlist">Liste des Utilisateurs</a>
+                    <a class="dropdown-item" class="nav-link" routerLink="newuser">Ajouter un utilisateur</a>
+                </div>
             </li>
             <li routerLinkActive="active">
                 <a class="nav-link" routerLink="auth">Authentification <span class="sr-only">(current)</span></a>
