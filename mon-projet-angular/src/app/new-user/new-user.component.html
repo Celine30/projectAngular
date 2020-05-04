@@ -1,3 +1,4 @@
+<a class="returnLink" routerLink="/userlist"><i class="fas fa-arrow-left mr-2"></i>Retour à la liste</a>
 <div class="col-sm-8 m-auto">
     <form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
         <div class="form-group">
@@ -16,9 +17,12 @@
             <label for="actorPref">Acteur Préferé</label>
             <input type="text" class="form-control" id="actorPref" formControlName="actorPref">
         </div>
-        <div class="form-group">
-            <label for="hobbies">Vos Hobbies</label>
-            <input type="text" class="form-control" id="hobbies" formControlName="hobbies">
+        <div formArrayName = 'hobbies' class="form-group">
+            <h3>Vos Hobbies</h3>
+            <div class="form-group" *ngFor="let hobbyControl of getHobbies().controls; let i = index">
+                <input type="text" class="form-control" [formControlName]="i">
+            </div>
+            <button type="button" class="btn btn-dark" (click)="onAddHobby()" >Ajouter un Hobby</button>
         </div>
         <button class="btn btn-dark" type="submit" [disabled]="userForm.invalid">Soumettre</button>
 
